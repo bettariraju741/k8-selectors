@@ -6,3 +6,8 @@ spec:
   containers:
     - name: nginx
       image: nginx:stable-perl
+    tolerations:
+    - key: "hardware"
+      operator: "equal"
+      value: "gpu"
+      effect: "NoSchedule"
